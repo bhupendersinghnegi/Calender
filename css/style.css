@@ -1,0 +1,304 @@
+@font-face {
+  font-family: "dinregular";
+  src: url(../fonts/DINNextLTPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: "dinmedium";
+  src: url(../fonts/DINNextLTPro-Medium.ttf);
+}
+
+@font-face {
+  font-family: "dinbold";
+  src: url(../fonts/DINNextLTPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: "dinheavy";
+  src: url(../fonts/DINNextLTPro-Heavy.ttf);
+}
+
+body {
+  font-family: "dinregular";
+}
+
+main {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  width: 100%;
+  height: 100vh;
+}
+
+.calendar .calendar-date:hover,
+.calendar .calendar-date {
+  background-color: #ececec;
+  border-radius: 4px;
+  border: 1px solid #ffeeee;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.calendar .calendar-date:hover {
+  background-color: #fff;
+}
+
+.calendar {
+  position: relative;
+  height: fit-content;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.none-btn {
+  background-color: unset;
+  border: none;
+  padding: 0;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.options.active .calendar-container {
+  display: block;
+}
+
+.calendar-container {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 5px);
+  min-width: 250px;
+  /* min-width: 350px; */
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 4px 4px 10px #0000001b, -4px -4px 10px #0000001b;
+}
+
+.header .header-selection,
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .header-selection {
+  margin: auto;
+}
+
+.optionsHanding {
+  position: relative;
+}
+
+.header .header-selection>div:first-child .optionsHanding::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 13px;
+  background: #aaa;
+  right: -11px;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.header .header-selection>div {
+  padding: 0 10px;
+}
+
+.header {}
+
+.header .calendarMonth {
+  /* min-width: 80px; */
+}
+
+.calendarMonth .options-menu {}
+
+.calendarMonth .options-menu li {}
+
+.header * {
+  cursor: pointer;
+}
+
+.header select:focus-visible,
+.header select {
+  border: none;
+  font-weight: bold;
+  appearance: none;
+  outline: none;
+}
+
+.day-header {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #262626;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.days>ul {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  list-style: none;
+  padding: 0;
+}
+
+.days-grid {
+  margin-bottom: 0;
+}
+
+.days>ul li {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.daysGrid li {
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  color: #333;
+}
+
+/* .daysGrid li[data-thismonth="true"]:hover { */
+.daysGrid li.active,
+.daysGrid li:hover {
+  /* outline: 1px solid #ccc; */
+  color: #2f80ed !important;
+  background: #2f80ed1a;
+}
+
+.daysGrid li.activeLeft {
+  background: #2F80ED99 !important;
+  color: #FFFFFF !important;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.daysGrid li.activeRight {
+  background: #2F80ED !important;
+  color: #FFFFFF !important;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.daysGrid li.activeRight.activeLeft {
+  border-radius: 8px !important;
+
+}
+
+.daysGrid li[data-thismonth="false"] {
+  /* background-color: #eeeeee; */
+  /* border: 1px solid #ccc; */
+  color: #aaa;
+}
+
+/* Option box */
+
+/* options == dropdown */
+.options {
+  /* position: relative; */
+}
+
+.header .options-menu {
+  position: absolute;
+  left: 0;
+  top: 17%;
+  width: 100%;
+  height: calc(100% - 17%);
+  background: #fff;
+  font-weight: normal;
+  padding: 0;
+  /* border-top: 1px solid #eee; */
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.options-menu {
+  display: none;
+}
+
+.calendarYearChange .options-menu {
+  overflow-y: scroll;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.calendarYearChange .options-menu li {}
+
+.header .options.active .options-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 1.7%;
+  font-size: 14px;
+}
+
+.options-menu li {
+  cursor: pointer;
+  transition: 0.8s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.options-menu li:hover {
+  background-color: #eee;
+}
+
+.selectedDateRange {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+  align-items: c;
+}
+
+.selectedDateRange>div {
+  font-size: 12px;
+  padding: 5px;
+  background-color: #f1f1f1;
+}
+
+.selectedDateRange .showDate {
+  flex: 1;
+}
+
+.selectedDateRange .dateSubmitted {
+  text-align: center;
+  background-color: #0954A0;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.selectedDateRange .dateSubmitted:hover {
+  background-color: #1263b6;
+}
+
+/* Option box close */
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d5d5d5;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b6b6b6;
+}
+
+/* Scrollbar */
