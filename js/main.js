@@ -257,7 +257,7 @@ function calendarInitHandler(query) {
 
     calendar.insertAdjacentHTML("afterbegin", HTML);
 
-libraiy 
+
     // Calender is a popup
     const calendarDate = calendar.querySelector(".calendarDate");
     calendar.classList.add("options");
