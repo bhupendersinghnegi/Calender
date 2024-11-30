@@ -160,7 +160,7 @@ function calendarHandler(calendarJSON) {
     // Set up next and last month go
     const lastMonth = setMonth - 1;
     const nextMonth = setMonth + 1;
-    getLastMonth ? getNextMonth.dataset.value = lastMonth : "";
+    getLastMonth ? getLastMonth.dataset.value = lastMonth : "";
     getNextMonth ? getNextMonth.dataset.value = nextMonth : "";
 
     // Set month and year accordingly
