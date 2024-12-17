@@ -1,4 +1,4 @@
-// import { printTableHandler } from "./PrintTables.js";
+import { printTableHandler } from "./PrintTables.js";
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let selectedDateInfo = [];
@@ -435,7 +435,7 @@ function navigator({ calendar, dateType, minDate, maxDate }) {
             const { timefirstdate, timelastdate, firstdate, lastdate } = calendarContainer.dataset;
 
             // This function will print the table that is needed to display.
-            // printTableHandler({ timefirstdate, timelastdate, firstdate, lastdate });
+            printTableHandler({ timefirstdate, timelastdate, firstdate, lastdate });
         }
         // if any options are open just close it
         const openOptions = calendar.querySelectorAll(".options.active");
@@ -488,21 +488,21 @@ function selectedDate(calendarJSON) {
 // const year = 2024;
 // const month = 11;
 
-calendarInitHandler({
-    tag: ".fromToDate",
-    isOpen: true,
-    maxDate: {
-        year: 2025,
-        month: 1,
-        day: 15
-    },
-    minDate: {
-        year: 2024,
-        month: 12,
-        day: 1
-    }
-    // max and min dates options  || today || yesterday || tomorrow || yearly || day of the year || day of the month
-});
+// calendarInitHandler({
+//     tag: ".fromToDate",
+//     isOpen: true,
+//     maxDate: {
+//         year: 2025,
+//         month: 1,
+//         day: 15
+//     },
+//     minDate: {
+//         year: 2024,
+//         month: 12,
+//         day: 1
+//     }
+//     // max and min dates options  || today || yesterday || tomorrow || yearly || day of the year || day of the month
+// });
 // Full calendar Object
 // {
 //     tag: ".fromToDate",
