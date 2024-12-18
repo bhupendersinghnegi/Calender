@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html{
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+        }
+        html {
             scroll-behavior: smooth;
         }
-        header ul{
+
+        header ul {
             list-style: none;
             display: flex;
             padding: 0;
             justify-content: center;
             gap: 16px;
         }
-        a{
-            text-transform: uppercase;
+
+        a {
             text-decoration: none;
             color: #333;
             padding: 10px 20px;
@@ -24,13 +31,34 @@
             background-color: #eee;
             border-radius: 100px;
         }
-        section{
+
+        section {
             width: 100%;
             height: 100vh;
             background-color: #f8f9fa;
+            font-size: 40px;
+            /* padding: 20px; */
+        }
+
+        #home {
+            background-color: #f005;
+        }
+
+        #feature {
+            background-color: #0f05;
+        }
+
+        #main {
+            background-color: #00f5;
+        }
+
+        #footer {
+            background-color: #0ff5;
+
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -44,6 +72,7 @@
     <section id="home">home</section>
     <section id="feature">feature</section>
     <section id="main">main</section>
-    <section id="footer">footer</section> 
+    <section id="footer">footer</section>
 </body>
+
 </html>
